@@ -80,7 +80,7 @@ auth1 = v3.Password(user_domain_name='default', username=username,password=passw
 sess1 = session.Session(auth=auth1)
 cin = ciclient.Client('2.0',session=sess1)
 #Creating volumes
-myvol=cin.volumes.create(name=volnm,size=sz)
+myvol=cin.volumes.create(name=volnm,size=sz,volume_type=voltp)
 print "Volume created successfully with volume id: "+myvol.id
                                                                         
 
